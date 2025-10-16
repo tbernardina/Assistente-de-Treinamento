@@ -38,7 +38,7 @@ def perguntar():
     db_context = "\n\n----\n\n".join(responses_text)
     prompt = ChatPromptTemplate.from_template(prompt_template)
     prompt = prompt.invoke({"db_context": db_context, "pergunta": q})
-    model = ChatOllama(model="qwen3:30b", temperature=0.1 )
+    model = ChatOllama(model="granite3.3:8b", temperature=0.1 )
     print("Reposta da IA:\n", model.invoke(prompt))
 
 perguntar()
