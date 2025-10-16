@@ -1,1 +1,4 @@
 .venv/
+PastaDocumentos/
+vectorStore/
+__pycache__/
