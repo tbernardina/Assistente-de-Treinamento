@@ -20,8 +20,8 @@ def process_document():
 def chunk_processing(docs):
     # Divide os documentos em pedaços menores de texto chamados chunks
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=2000,
-        chunk_overlap=500,
+        chunk_size=1000,
+        chunk_overlap=300,
         length_function=len,
         add_start_index=True
     )
@@ -35,4 +35,5 @@ def vetor_chunks(chunks):
     db = Chroma.from_documents(chunks, embeddings, persist_directory="vectorStore")
     print("Vetor criado com sucesso!")
 
-conn_db()
+if __name__ == "__main__":
+    conn_db()

@@ -9,7 +9,7 @@ server = Client()
 class Message(BaseModel):
     message: str
 
-@app.post("/ia")
+@app.post("/")
 async def chat(msg: Message):
     messages = [
         {
@@ -18,7 +18,7 @@ async def chat(msg: Message):
         },
     ]
     response = ""
-    for part in server.chat(model="granite3.3:8b", messages=messages, stream=True):
+    for part in server.chat(model="qwen3-coder:480b-cloud", messages=messages, stream=True):
         response += part['message']['content']
     return response
 
