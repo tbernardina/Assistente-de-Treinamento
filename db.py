@@ -35,4 +35,5 @@ def vetor_chunks(chunks):
     db = Chroma.from_documents(chunks, embeddings, persist_directory="vectorStore")
     print("Vetor criado com sucesso!")
 
-conn_db()
+if __name__ == "__main__":
+    conn_db()
