@@ -20,8 +20,8 @@ def process_document():
 def chunk_processing(docs):
     # Divide os documentos em pedaços menores de texto chamados chunks
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=300,
+        chunk_size=800,
+        chunk_overlap=200,
         length_function=len,
         add_start_index=True
     )
