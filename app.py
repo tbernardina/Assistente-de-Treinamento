@@ -72,6 +72,10 @@ async def _stream_chat(server: Client, model: str, messages: List[dict], tempera
     response = await asyncio.to_thread(_collect)
     return response
 
+@app.get("/")
+async def root():
+    return "A API está em funcionamento... :) (ACESSE '/docs' NO FINAL DO LINK PARA MAIS INFORMAÇÕES)"
+
 PROMPT_TEMPLATE = """
 Você é uma assistente virtual de treinamento corporativo da empresa. 
 Seu papel é ajudar colaboradores a entender e aplicar corretamente os processos, políticas e treinamentos internos.
