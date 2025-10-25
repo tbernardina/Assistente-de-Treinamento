@@ -1,0 +1,5 @@
+.venv/
+PastaDocumentos/
+vectorStore/
+__pycache__/
+.vscode/
