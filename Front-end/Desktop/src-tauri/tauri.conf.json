@@ -12,6 +12,16 @@
   "app": {
     "windows": [
       {
+        "title": "Chat",
+        "label": "chat",
+        "width": 400,
+        "height": 600,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "visible": true,
+        "maximizable": false
+      },
+      {
         "title": "Bubble",
         "label": "bubble",
         "width": 80,
